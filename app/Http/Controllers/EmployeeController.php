@@ -8,7 +8,6 @@ use App\Traits\ApiResponseTrait;
 
 use Exception;
 use Illuminate\Http\Request;
-use PhpParser\Node\Stmt\TryCatch;
 
 class EmployeeController extends Controller
 {
