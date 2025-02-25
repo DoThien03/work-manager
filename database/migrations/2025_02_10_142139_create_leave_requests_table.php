@@ -17,13 +17,13 @@ return new class extends Migration
             $table->foreign('emp_id')->references('id')->on('employees')->onDelete('cascade');
             $table->date('leave_start_date');
             $table->date('leave_end_date');
-            $table->integer('leave_hours');
+            $table->decimal('leave_hours');
             $table->string('leave_type');
             $table->string('leave_reason');
             $table->string('leave_status');
-            $table->date('leave_approved_date');
-            $table->string('leave_confirm_reason');
-            $table->string('leave_accept_by');
+            $table->date('leave_approved_date')->nullable();
+            $table->string('leave_confirm_reason')->nullable();
+            $table->unsignedBigInteger('leave_accept_by')->nullable();
             $table->timestamps();
         });
     }
